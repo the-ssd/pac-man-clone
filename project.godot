@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="PAC-MAN clone"
+run/main_scene="uid://ca50dnmq34hhi"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 

@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://ca50dnmq34hhi"]
+
+[ext_resource type="Texture2D" uid="uid://cbufir3ddykjf" path="res://icon.svg" id="1_ig7tw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jffqy"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jffqy"]
+
+[node name="Main" type="Node2D" unique_id=1452865001]
+
+[node name="pacman" type="Node2D" parent="." unique_id=261700198]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="pacman" unique_id=939190745]
+linear_velocity = Vector2(100, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pacman/RigidBody2D" unique_id=660692109]
+shape = SubResource("CircleShape2D_jffqy")
+
+[node name="Sprite2D" type="Sprite2D" parent="pacman/RigidBody2D" unique_id=106109919]
+position = Vector2(-2.3841858e-07, 0)
+scale = Vector2(0.15625, 0.15625)
+texture = ExtResource("1_ig7tw")
+
+[node name="level" type="Node2D" parent="." unique_id=1597962715]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="level" unique_id=2055676088]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="level/StaticBody2D" unique_id=1176869434]
+position = Vector2(0, 16)
+shape = SubResource("WorldBoundaryShape2D_jffqy")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1881961794]
