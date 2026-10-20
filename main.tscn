@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cbufir3ddykjf" path="res://icon.svg" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://dq56bsn8n4ae4" path="res://level.tres" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://ctfq2je80l223" path="res://addons/virtual_joystick_DX/vjdx_core_script.gd" id="3_h2yge"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jffqy"]
 
@@ -34,9 +35,39 @@ shape = SubResource("WorldBoundaryShape2D_jffqy")
 texture = ExtResource("2_0xm2m")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1881961794]
-zoom = Vector2(2, 2)
+zoom = Vector2(3, 3)
 
 [node name="Bckground" type="Polygon2D" parent="." unique_id=965822461]
 z_index = -100
 color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(-1000, -1000, -1000, 1000, 1000, 1000, 1000, -1000)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1203973648]
+
+[node name="VirtualJoystickDX" type="Control" parent="CanvasLayer" unique_id=281358722]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 107.0
+offset_top = -196.0
+offset_right = 207.0
+offset_bottom = -96.0
+grow_vertical = 0
+pivot_offset = Vector2(50, 50)
+size_flags_horizontal = 0
+size_flags_vertical = 8
+mouse_filter = 2
+script = ExtResource("3_h2yge")
+controller_style = 1
+joystick_radius = 50.0
+dpad_radius = 50.0
+"Joystick Mode" = null
+region_x = 98.0
+region_y = 441.0
+region_w = 112.0
+region_h = 118.0
+"Colors - Joystick" = null
+"Textures - Joystick" = null
+metadata/_custom_type_script = "uid://ctfq2je80l223"
