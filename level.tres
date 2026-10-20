@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" format=3 uid="uid://dq56bsn8n4ae4"]
+
+[ext_resource type="Texture2D" uid="uid://cdn2lbc6g2ds" path="res://NES - Pac-Man - Miscellaneous - General Sprites.png" id="1_3fri8"]
+
+[resource]
+atlas = ExtResource("1_3fri8")
+region = Rect2(170, 58, 166, 215)

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ca50dnmq34hhi"]
 
 [ext_resource type="Texture2D" uid="uid://cbufir3ddykjf" path="res://icon.svg" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://dq56bsn8n4ae4" path="res://level.tres" id="2_0xm2m"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jffqy"]
 
@@ -29,4 +30,13 @@ texture = ExtResource("1_ig7tw")
 position = Vector2(0, 16)
 shape = SubResource("WorldBoundaryShape2D_jffqy")
 
+[node name="Sprite2D" type="Sprite2D" parent="level" unique_id=1713805158]
+texture = ExtResource("2_0xm2m")
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1881961794]
+zoom = Vector2(2, 2)
+
+[node name="Bckground" type="Polygon2D" parent="." unique_id=965822461]
+z_index = -100
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-1000, -1000, -1000, 1000, 1000, 1000, 1000, -1000)
